@@ -3,6 +3,8 @@
 :root {
   --white: white;
   --light-grey: #f8f3f3;
+  --grey: #E5E5E5;
+  --dark-grey: rgba(0, 0, 0, 0.36);
   --light-green: #b4e3b3;
   --green: #4e924c;
   --boxes-gap: 2.5rem;
@@ -55,4 +57,20 @@ body {
   font-size: 16px;
   font-weight: bold;
   padding: 0.75rem;
+}
+
+.section-products__item {
+  padding: .7rem;
+  width: 100%;
+  background: var(--grey);
+  margin-bottom: .5rem;
+
+}
+
+.section-products__item--title {
+  margin-bottom: .5rem;
+}
+
+.section-products__item--description {
+  color: var(--dark-grey);
 }
