@@ -1,11 +1,11 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,900";
+@import "https://fonts.googleapis.com/css?family=Lato:400,700,900";
 
 :root {
   --white: white;
   --light-grey: #f8f3f3;
   --light-green: #b4e3b3;
   --green: #4e924c;
-  --gap: 2.5rem;
+  --boxes-gap: 2.5rem;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 
 .main {
   display: flex;
-  padding: var(--gap);
+  padding: var(--boxes-gap);
   height: 100vh;
   width: 100vw;
 }
@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: var(--gap);
+  margin-left: var(--boxes-gap);
 }
 
 .section {
@@ -38,7 +38,7 @@ body {
 }
 
 .section--add-product {
-  margin-bottom: var(--gap);
+  margin-bottom: var(--boxes-gap);
   height: 40%;
 }
 
@@ -46,7 +46,8 @@ body {
   width: 30%;
 }
 
-.section-box__title {
+h2 {
+  margin-top: 0;
   text-align: center;
   background: var(--light-green);
   color: var(--green);
