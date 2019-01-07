@@ -59,18 +59,22 @@ body {
   padding: 0.75rem;
 }
 
-.section-products__item {
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-list__item {
   padding: .7rem;
   width: 100%;
   background: var(--grey);
   margin-bottom: .5rem;
-
 }
 
-.section-products__item--title {
+.product-list--title {
   margin-bottom: .5rem;
 }
 
-.section-products__item--description {
+.product-list--description {
   color: var(--dark-grey);
 }
