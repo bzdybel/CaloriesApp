@@ -50,7 +50,6 @@ body {
 
 .section-box__title {
   margin-top: 0;
-  margin-bottom: 2rem;
   text-align: center;
   background: var(--light-green);
   color: var(--green);
@@ -62,6 +61,7 @@ body {
 .product-list {
   list-style: none;
   padding: 0;
+  margin-top: 2rem;
 }
 
 .product-list__item {
@@ -71,10 +71,10 @@ body {
   margin-bottom: .5rem;
 }
 
-.product-list--title {
+.product-list__title {
   margin-bottom: .5rem;
 }
 
-.product-list--description {
+.product-list__description {
   color: var(--dark-grey);
 }
