@@ -1,15 +1,20 @@
-const productListItem = document.querySelector("li");
+const productListItem = document.createElement("li");
 const productList = document.querySelector(".product-list");
 
-const orange = document.createElement("div");
-const orangeDescription = document.createElement("small");
+const productArray = [];
 
-orange.classList.add("product-list__title");
-orange.innerText = "Orange";
+for (let i = 0; i < 5; ++i) {
+  const product = document.createElement("div");
+  const productDescription = document.createElement("small");
+  product.classList.add("product-list__title");
+  productDescription.classList.add("product-list__description");
 
-orangeDescription.classList.add("product-list__description");
-orangeDescription.innerText = "48kcal per 100g";
+  productListItem.appendChild(product);
+  productListItem.appendChild(productDescription);
 
-productListItem.appendChild(orange);
-productListItem.appendChild(orangeDescription);
-productList.appendChild(productListItem);
+  productArray[i] = productListItem;
+}
+
+for (let i = 0; i < 5; ++i) {
+  productList.appendChild(productArray[i]);
+}
