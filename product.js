@@ -1,13 +1,45 @@
-const products = [
-    "Apple",
-    "Egg",
-    "Banana yoghurt",
-    "Orange",
-    "Chicken and rice"
+const products = [{
+        name: "Apple",
+        kcalper100g: "52"
+    },
+    {
+        name: "Egg",
+        kcalper100g: "140"
+    },
+    {
+        name: "Banana yoghurt",
+        kcalper100g: "86"
+    },
+    {
+        name: "Chicken and rice",
+        kcalper100g: "79"
+    },
+    {
+        name: "Orange",
+        kcalper100g: "79"
+    },
+
 ];
 
-products["Apple"] = "52kcal per 100g";
-products["Egg"] = "140kcal per 100g";
-products["Banana yoghurt"] = "86kcal per 100g";
-products["Orange"] = "79kcal per 100g";
-products["Chicke and rice"] = "191kcal per 100g";
+const productList = document.querySelector(".product-list");
+
+products.forEach(product => {
+
+    const productListItem = document.createElement("li");
+    productListItem.classList.add("product-list__item");
+
+
+
+    const productTitle = document.createElement("div");
+    productTitle.classList.add("product-list__title");
+    productTitle.innerText = product.name;
+
+    const productDescription = document.createElement("small");
+    productDescription.classList.add("product-list__description");
+    productDescription.innerText = `${product.kcalper100g} kcal per 100g`;
+
+    productListItem.appendChild(productTitle);
+    productListItem.appendChild(productDescription);
+    productList.appendChild(productListItem);
+
+});
