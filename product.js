@@ -29,7 +29,6 @@ products.forEach(product => {
     productListItem.classList.add("product-list__item");
 
 
-
     const productTitle = document.createElement("div");
     productTitle.classList.add("product-list__title");
     productTitle.innerText = product.name;
