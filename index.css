@@ -3,6 +3,8 @@
 :root {
   --white: white;
   --light-grey: #f8f3f3;
+  --grey: #E5E5E5;
+  --dark-grey: rgba(0, 0, 0, 0.36);
   --light-green: #b4e3b3;
   --green: #4e924c;
   --boxes-gap: 2.5rem;
@@ -48,11 +50,31 @@ body {
 
 .section-box__title {
   margin-top: 0;
-  margin-bottom: 2rem;
   text-align: center;
   background: var(--light-green);
   color: var(--green);
   font-size: 16px;
   font-weight: bold;
   padding: 0.75rem;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.product-list__item {
+  padding: .7rem;
+  width: 100%;
+  background: var(--grey);
+  margin-bottom: .5rem;
+}
+
+.product-list__title {
+  margin-bottom: .5rem;
+}
+
+.product-list__description {
+  color: var(--dark-grey);
 }
