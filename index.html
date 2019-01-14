@@ -1,59 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8" />
+    <title>Calorie App</title>
+    <meta name="description" content="Calories application" />
+    <meta name="author" content="Bartlomiej Zdybel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 
-  <title>Calorie App</title>
-  <meta name="description" content="Calories application" />
-  <meta name="author" content="Bartlomiej Zdybel" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="icon" href="icon_code.jpg" />
+  </head>
 
-  <link rel="icon" href="icon_code.jpg" />
-</head>
-
-<body>
-  <main class="container">
-    <section class="section-box section-box--products">
-      <h2 class="section-box__title">Products</h2>
-
-      <ul class="product-list">
-        <!-- <li class="product-list__item">
-          <div class="product-list__title">Apple</div>
-          <small class="product-list__description">52kcal per 100g</small>
-        </li>
-        <li class="product-list__item">
-          <div class="product-list__title">Chicken and rice</div>
-          <small class="product-list__description">191kcal per 100g</small>
-        </li>
-        <li class="product-list__item">
-          <div class="product-list__title">Egg</div>
-          <small class="product-list__description">140kcal per 100g</small>
-        </li>
-        <li class="product-list__item">
-          <div class="product-list__title">Banana yoghurt</div>
-          <small class="product-list__description">86kcal per 100g</small>
-        </li> -->
-
-      </ul>
-
-    </section>
-
-    <section class="main-container">
-      <section class="section-box section-box--add-product">
-        <h2 class="section-box__title">Add product</h2>
+  <body>
+    <main class="container">
+      <section class="section-box section-box--products">
+        <h2 class="section-box__title">Products</h2>
+        <ul class="product-list"></ul>
       </section>
-      <section class="section-box">
-        <h2 class="section-box__title">Today - 06.01.2019</h2>
+
+      <section class="main-container">
+        <section class="section-box section-box--add-product">
+          <h2 class="section-box__title">Add product</h2>
+        </section>
+
+        <section
+          class="
+              section-box"
+        >
+          <h2 class="section-box__title">Today - 06.01.2019</h2>
+        </section>
       </section>
-    </section>
+    </main>
 
-  </main>
-
-  <script type="text/javascript" src="product.js"></script>
-
-
-</body>
-
+    <script type="text/javascript" src="hydrate-product-list.js"></script>
+  </body>
 </html>
