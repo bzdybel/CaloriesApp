@@ -26,39 +26,45 @@
         <section class="section-box section-box--add-product">
           <h2 class="section-box__title">Add product</h2>
 
-          <form class="section-box__item">
-            <div class="section-box__item--wrapper">
-              <label class="section-box__item--title" for="product"
+          <form class="add-product-form">
+            <div class="add-product-form__wrapper">
+              <label class="add-product-form__label" for="product"
                 >Product</label
               >
-              <select class="section-box__dropdown" id="product">
-                <option class="secion-box__dropdown--item">Apple</option>
-                <option class="secion-box__dropdown--item">Egg</option>
-                <option class="secion-box__dropdown--item"
+              <select class="add-product-form__dropdown" id="product">
+                <option class="add-product-form__dropdown-item">Apple</option>
+                <option class="add-product-form__dropdown-item">Egg</option>
+                <option class="add-product-form__dropdown-item"
                   >Chicken and rice</option
                 >
-                <option class="secion-box__dropdown--item">Orange</option>
+                <option class="add-product-form__dropdown-item">Orange</option>
               </select>
             </div>
 
-            <div class="section-box__item--wrapper">
-              <label class="section-box__item--title" for="amount"
+            <div class="add-product-form__wrapper">
+              <label class="add-product-form__label" for="amount"
                 >Amount(g)</label
               >
               <input
-                class="section-box__input"
+                class="add-product-form__input"
                 id="amount"
                 name="amount"
                 type="number"
               />
             </div>
 
-            <div class="section-box-result">
-              <h3 class="section-box-result__item">result in 175kcal</h3>
-              <small class="section-box-result__item">91kcal per 100g</small>
+            <div
+              class="add-product-form__wrapper add-product-form__wrapper--result"
+            >
+              <strong class="add-product-form__result--kcal-outcome"
+                >results in 175kcal</strong
+              >
+              <small class="add-product-form__result--kcal-info"
+                >91kcal per 100g</small
+              >
             </div>
 
-            <button class="section-box__button" type="submit">add</button>
+            <button class="add-product-form__button" type="submit">add</button>
           </form>
         </section>
 

@@ -6,6 +6,7 @@
   --light-grey: #f8f3f3;
   --grey: #E5E5E5;
   --dark-grey: rgba(0, 0, 0, 0.36);
+  --shadow-grey: rgba(0, 0, 0, 0.47);
   --light-green: #b4e3b3;
   --green: #4e924c;
   --dark-green: #478D46;
@@ -61,16 +62,16 @@ body {
   padding: 0.75rem;
 }
 
-.section-box__item {
+.add-product-form {
   display: flex;
-  margin: 3rem 4rem;
+  margin: 1.5rem 2rem;
 }
 
-.section-box__item--title {
+.add-product-form__label {
   margin-bottom: .5rem;
 }
 
-.section-box__dropdown {
+.add-product-form__dropdown {
   padding: .7rem 5rem .7rem .7rem;
   background: var(--grey);
   border-color: var(--grey);
@@ -78,18 +79,26 @@ body {
 }
 
 
-.secion-box__dropdown--item {
-  font-size: 1rem;
+.add-product-form__dropdown-item {
+  font-size: 16px;
   padding: .1rem;
 }
 
-.section-box__item--wrapper {
+.add-product-form__wrapper {
   display: flex;
   flex-direction: column;
   margin-right: 3rem;
 }
 
-.section-box__input {
+.add-product-form__wrapper--result {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.add-product-form__input {
 
   border: solid var(--grey);
   padding: .7rem;
@@ -97,7 +106,7 @@ body {
   color: var(--light-black);
 }
 
-.section-box-result {
+.add-product-form__result {
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -105,11 +114,16 @@ body {
   flex-direction: column;
 }
 
-.section-box-result__item--result {
+.add-product-form__result--kcal-outcome {
   font-weight: bold;
+  margin-bottom: .5rem;
 }
 
-.section-box__button {
+.add-product-form__result--kcal-info {
+  color: var(--shadow-grey);
+}
+
+.add-product-form__button {
   padding: 0 4rem;
   margin: 1rem auto;
   border: 2px solid var(--dark-green);
