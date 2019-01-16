@@ -108,10 +108,12 @@ body {
 .add-product-form__kcal-outcome {
   font-weight: bold;
   margin-bottom: .5rem 0;
+  white-space: nowrap;
 }
 
 .add-product-form__kcal-info {
   color: var(--dark-grey);
+  white-space: nowrap;
 }
 
 .add-product-form__button {
@@ -128,6 +130,11 @@ body {
   font-size: 14px;
 }
 
+.add-product-form__button:hover {
+  transition-duration: 500ms;
+  filter: brightness(130%);
+
+}
 
 
 .product-list {
