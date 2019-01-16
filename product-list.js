@@ -19,16 +19,18 @@ const products = [{
         value: "bananaYoghurt"
     }
 ];
-
-const productListDropdown = document.querySelector(".add-product-form__dropdown");
+const productListWrapper = document.querySelector("add-product-form__wrapper");
+const productListDropdown = document.querySelector("add-product-form__dropdown");
 
 products.forEach(product => {
     const productListDropdownItem = document.createElement("option");
 
     productListDropdownItem.classList.add("add-product-form__dropdown-item");
-    productListDropdownItem.innerText = product.name;
+    productListDropdownItem.text = product.name;
     productListDropdownItem.value = product.value;
 
     productListDropdown.appendChild(productListDropdownItem);
 
-})
+});
+
+productListWrapper.appendChild(productListDropdown);
