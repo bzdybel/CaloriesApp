@@ -1,4 +1,4 @@
-const products = [{
+const product = [{
         name: "Apple",
         value: "apple"
     },
@@ -20,13 +20,13 @@ const products = [{
     }
 ];
 const productListWrapper = document.querySelector("add-product-form__wrapper");
-const productListDropdown = document.querySelector("add-product-form__dropdown");
+const productListDropdown = document.getElementById("product");
 
-products.forEach(product => {
+product.forEach(product => {
     const productListDropdownItem = document.createElement("option");
 
     productListDropdownItem.classList.add("add-product-form__dropdown-item");
-    productListDropdownItem.text = product.name;
+    productListDropdownItem.innerHTML = product.name;
     productListDropdownItem.value = product.value;
 
     productListDropdown.appendChild(productListDropdownItem);
