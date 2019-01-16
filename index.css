@@ -133,7 +133,7 @@ body {
 .add-product-form__button:hover {
   transition-duration: 500ms;
   filter: brightness(130%);
-
+  cursor: pointer;
 }
 
 
