@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Calorie App</title>
-    <meta name="description" content="Calories application" />
-    <meta name="author" content="Bartlomiej Zdybel" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
+<head>
+  <meta charset="utf-8" />
 
-    <link rel="icon" href="icon_code.jpg" />
-  </head>
+  <title>Calorie App</title>
+  <meta name="description" content="Calories application" />
+  <meta name="author" content="Bartlomiej Zdybel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
 
-  <body>
-    <main class="container">
-      <section class="section-box section-box--products">
-        <h2 class="section-box__title">Products</h2>
-        <ul class="product-list"></ul>
+  <link rel="icon" href="icon_code.jpg" />
+</head>
+
+<body>
+  <main class="container">
+    <section class="section-box section-box--products">
+      <h2 class="section-box__title">Products</h2>
+      <ul class="product-list"></ul>
+    </section>
+
+    <section class="main-container">
+      <section class="section-box section-box--add-product">
+        <h2 class="section-box__title">Add product</h2>
+
+        <form class="add-product-form">
+          <div class="add-product-form__wrapper">
+            <label class="add-product-form__label" for="product">Product</label>
+            <select class="add-product-form__dropdown" id="product" name="product">
+            </select>
+          </div>
+
+          <div class="add-product-form__wrapper">
+            <label class="add-product-form__label" for="amount">Amount(g)</label>
+            <input class="add-product-form__input" id="amount" name="amount" type="number" min="1" step="1" />
+          </div>
+
+          <div class="add-product-form__wrapper add-product-form__wrapper--result">
+            <strong class="add-product-form__kcal-outcome">results in 175kcal</strong>
+            <small class="add-product-form__kcal-info">91kcal per 100g</small>
+          </div>
+
+          <button class="add-product-form__button" type="submit">add</button>
+        </form>
       </section>
 
-      <section class="main-container">
-        <section class="section-box section-box--add-product">
-          <h2 class="section-box__title">Add product</h2>
-        </section>
-
-        <section
-          class="
-              section-box"
-        >
-          <h2 class="section-box__title">Today - 06.01.2019</h2>
-        </section>
+      <section class="
+              section-box">
+        <h2 class="section-box__title">Today - 06.01.2019</h2>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <script type="text/javascript" src="hydrate-product-list.js"></script>
-  </body>
+  <script type="text/javascript" src="hydrate-product-list.js"></script>
+
+</body>
+
 </html>

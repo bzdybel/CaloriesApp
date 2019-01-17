@@ -1,27 +1,37 @@
 const products = [{
         name: "Apple",
-        kcalPer100g: "52"
+        kcalPer100g: "52",
+        value: "apple"
     },
     {
         name: "Egg",
-        kcalPer100g: "140"
+        kcalPer100g: "140",
+        value: "egg"
+
     },
     {
         name: "Banana yoghurt",
-        kcalPer100g: "86"
+        kcalPer100g: "86",
+        value: "bananaYoghurt"
+
     },
     {
         name: "Chicken and rice",
-        kcalPer100g: "79"
+        kcalPer100g: "79",
+        value: "chickenAndRice"
+
     },
     {
         name: "Orange",
-        kcalPer100g: "79"
+        kcalPer100g: "79",
+        value: "orange"
+
     },
 
 ];
 
 const productList = document.querySelector(".product-list");
+const productListDropdown = document.querySelector(".add-product-form__dropdown");
 
 products.forEach(product => {
 
@@ -39,5 +49,18 @@ products.forEach(product => {
     productListItem.appendChild(productTitle);
     productListItem.appendChild(productDescription);
     productList.appendChild(productListItem);
+
+});
+
+
+
+products.forEach(product => {
+    const productListDropdownItem = document.createElement("option");
+
+    productListDropdownItem.classList.add("add-product-form__dropdown-item");
+    productListDropdownItem.innerText = product.name;
+    productListDropdownItem.value = product.value;
+
+    productListDropdown.appendChild(productListDropdownItem);
 
 });
