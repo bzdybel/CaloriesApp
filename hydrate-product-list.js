@@ -18,7 +18,7 @@ const products = [{
     {
         name: "Chicken and rice",
         kcalPer100g: "79",
-        value: "chickenandRice"
+        value: "chickenAndRice"
 
     },
     {
@@ -31,7 +31,7 @@ const products = [{
 ];
 
 const productList = document.querySelector(".product-list");
-const productListDropdown = document.getElementById("product");
+const productListDropdown = document.querySelector(".add-product-form__dropdown");
 
 products.forEach(product => {
 
