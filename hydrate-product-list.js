@@ -28,6 +28,7 @@ const products = [{
 
     },
 
+
 ];
 
 const productList = document.querySelector(".product-list");
