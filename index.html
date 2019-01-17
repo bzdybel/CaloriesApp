@@ -28,17 +28,18 @@
           <div class="add-product-form__wrapper">
             <label class="add-product-form__label" for="product">Product</label>
             <select class="add-product-form__dropdown" id="product" name="product">
+              <option class="add-product-form__dropdown-item" disabled selected>Choose a product</option>
             </select>
           </div>
 
           <div class="add-product-form__wrapper">
             <label class="add-product-form__label" for="amount">Amount(g)</label>
-            <input class="add-product-form__input" id="amount" name="amount" type="number" min="1" step="1" />
+            <input class="add-product-form__input" id="amount" name="amount" type="number" min="1" step="1" value="100" />
           </div>
 
           <div class="add-product-form__wrapper add-product-form__wrapper--result">
-            <strong class="add-product-form__kcal-outcome">results in 175kcal</strong>
-            <small class="add-product-form__kcal-info">91kcal per 100g</small>
+            <strong class="add-product-form__kcal-outcome"></strong>
+            <small class="add-product-form__kcal-info"></small>
           </div>
 
           <button class="add-product-form__button" type="submit">add</button>
@@ -53,6 +54,7 @@
   </main>
 
   <script type="text/javascript" src="hydrate-product-list.js"></script>
+  <script type="text/javascript" src="result.js"></script>
 
 </body>
 
