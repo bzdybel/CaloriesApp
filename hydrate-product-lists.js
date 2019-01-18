@@ -1,32 +1,33 @@
 const products = [{
         name: "Apple",
-        kcalPer100g: "52",
+        kcalPer100g: 52,
         value: "apple"
     },
     {
         name: "Egg",
-        kcalPer100g: "140",
+        kcalPer100g: 140,
         value: "egg"
 
     },
     {
         name: "Banana yoghurt",
-        kcalPer100g: "86",
+        kcalPer100g: 86,
         value: "bananaYoghurt"
 
     },
     {
         name: "Chicken and rice",
-        kcalPer100g: "79",
+        kcalPer100g: 79,
         value: "chickenAndRice"
 
     },
     {
         name: "Orange",
-        kcalPer100g: "79",
+        kcalPer100g: 79,
         value: "orange"
 
     },
+
 
 ];
 

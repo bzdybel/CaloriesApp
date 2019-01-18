@@ -122,7 +122,8 @@ body {
   border: 2px solid var(--dark-green);
   border-radius: 3px;
   text-align: center;
-  margin-left: 3rem;
+  margin-left: auto;
+  margin-right: 4rem;
   text-transform: uppercase;
   background: var(--dark-green);
   color: var(--light-white);
