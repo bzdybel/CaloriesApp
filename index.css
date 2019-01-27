@@ -169,7 +169,7 @@ body {
 
 .section-box__wrapper--right {
   width: 50%;
-  margin: .85rem 2rem;
+  margin: 0 2rem;
 }
 
 .section-box__title--left {
@@ -186,7 +186,7 @@ body {
   background: var(--grey);
   padding: 1rem;
   opacity: .7;
-  border-radius: 20%;
+  border-radius: 100%;
 }
 
 .total__label {
@@ -199,6 +199,12 @@ body {
 .total__label--description {
   text-align: center;
   font-size: 1rem;
-  color: var(--dark-grey);
+  color: var(--dark-green);
+}
 
+.section-box__image {
+  margin: 4rem 10rem;
+  display: flex;
+  width: 300px;
+  height: 150px;
 }
