@@ -97,7 +97,6 @@ body {
 }
 
 .add-product-form__input {
-
   border: solid var(--grey);
   padding: .7rem;
   background: var(--grey);
@@ -157,4 +156,49 @@ body {
 
 .product-list__description {
   color: var(--dark-grey);
+}
+
+.section-box__wrapper {
+  display: flex;
+}
+
+.section-box__wrapper--left {
+  margin-left: 0.5rem;
+  width: 50%;
+}
+
+.section-box__wrapper--right {
+  width: 50%;
+  margin: .85rem 2rem;
+}
+
+.section-box__title--left {
+  text-align: center;
+}
+
+.section-box__title--right {
+  text-align: center;
+}
+
+.total__label--wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--grey);
+  padding: 1rem;
+  opacity: .7;
+  border-radius: 20%;
+}
+
+.total__label {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--light-black);
+
+}
+
+.total__label--description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--dark-grey);
+
 }
