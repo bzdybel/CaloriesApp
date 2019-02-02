@@ -1,105 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8" />
+    <title>Calorie App</title>
+    <meta name="description" content="Calories application" />
+    <meta name="author" content="Bartlomiej Zdybel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
 
-  <title>Calorie App</title>
-  <meta name="description" content="Calories application" />
-  <meta name="author" content="Bartlomiej Zdybel" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="icon" href="icon_code.jpg" />
+  </head>
 
-  <link rel="icon" href="icon_code.jpg" />
-</head>
-
-<body>
-  <main class="container">
-    <section class="section-box section-box--products">
-      <h2 class="section-box__title">Products</h2>
-      <ul class="product-list"></ul>
-    </section>
-
-    <section class="main-container">
-      <section class="section-box section-box--add-product">
-        <h2 class="section-box__title">Add product</h2>
-
-        <form class="add-product-form">
-          <div class="add-product-form__wrapper">
-            <label class="add-product-form__label" for="product">Product</label>
-            <select class="add-product-form__dropdown" id="product" name="product">
-              <option class="add-product-form__dropdown-item" disabled selected>Choose a product</option>
-            </select>
-          </div>
-
-          <div class="add-product-form__wrapper">
-            <label class="add-product-form__label" for="amount">Amount(g)</label>
-            <input class="add-product-form__input" id="amount" name="amount" type="number" min="1" step="1" value="100" />
-          </div>
-
-          <div class="add-product-form__wrapper add-product-form__wrapper--result">
-            <strong class="add-product-form__kcal-outcome"></strong>
-            <small class="add-product-form__kcal-info"></small>
-          </div>
-
-          <button class="add-product-form__button" type="submit">add</button>
-        </form>
+  <body>
+    <main class="container">
+      <section class="section-box section-box--products">
+        <h2 class="section-box__title">Products</h2>
+        <ul class="product-list"></ul>
       </section>
 
-      <section class="
-              section-box">
-        <h2 class="section-box__title">Today - 06.01.2019</h2>
+      <section class="main-container">
+        <section class="section-box section-box--add-product">
+          <h2 class="section-box__title">Add product</h2>
 
-        <div class="section-box__wrapper">
+          <form class="add-product-form">
+            <div class="add-product-form__wrapper">
+              <label class="add-product-form__label" for="product"
+                >Product</label
+              >
+              <select
+                class="add-product-form__dropdown"
+                id="product"
+                name="product"
+              >
+                <option
+                  class="add-product-form__dropdown-item"
+                  disabled
+                  selected
+                  >Choose a product</option
+                >
+              </select>
+            </div>
 
-          <div class="section-box__wrapper--left">
-            <h3 class=section-box__title--left>Choosen products:</h2>
+            <div class="add-product-form__wrapper">
+              <label class="add-product-form__label" for="amount"
+                >Amount(g)</label
+              >
+              <input
+                class="add-product-form__input"
+                id="amount"
+                name="amount"
+                type="number"
+                min="1"
+                step="1"
+                value="100"
+              />
+            </div>
+
+            <div
+              class="add-product-form__wrapper add-product-form__wrapper--result"
+            >
+              <strong class="add-product-form__kcal-outcome"></strong>
+              <small class="add-product-form__kcal-info"></small>
+            </div>
+
+            <button class="add-product-form__button" type="submit">add</button>
+          </form>
+        </section>
+
+        <section
+          class="
+              section-box section-box--summary"
+        >
+          <h2 class="section-box__title">Today - 06.01.2019</h2>
+
+          <div class="section-box__wrapper">
+            <div class="section-box__wrapper--left">
+              <h3 class="section-box__title--left">Choosen products:</h3>
               <ul class="product-list product-list--choosen-products">
-                <li class="product-list__item product-list__item--choosen-products">
-                  <div class="product-list__title ">Apple</div>
-                  <small class="product-list__description">Amount: 150g</small>
-                  <small class="product-list__description">results: 78kcal</small>
+                <li
+                  class="product-list__item product-list__item--choosen-products"
+                >
+                  <div class="product-list__title--choosen-products">
+                    Apple:
+                  </div>
+
+                  <div class="product-list__description--choosen-products">
+                    150g ·
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    78kcal
+                  </div>
                 </li>
-                <li class="product-list__item product-list__item--choosen-products">
-                  <div class="product-list__title">Egg</div>
-                  <small class="product-list__description">Amount: 100g</small>
-                  <small class="product-list__description">results: 140kcal</small>
+
+                <li
+                  class="product-list__item product-list__item--choosen-products"
+                >
+                  <div class="product-list__title--choosen-products">Egg:</div>
+                  <div class="product-list__description--choosen-products">
+                    100g ·
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    140kcal
+                  </div>
                 </li>
-                <li class="product-list__item product-list__item--choosen-products">
-                  <div class="product-list__title">Banana yoghurt</div>
-                  <small class="product-list__description">Amount: 200g</small>
-                  <small class="product-list__description">results: 172kcal</small>
+
+                <li
+                  class="product-list__item product-list__item--choosen-products"
+                >
+                  <div class="product-list__title--choosen-products">
+                    Orange:
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    250g ·
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    197.5kcal
+                  </div>
                 </li>
-                <li class="product-list__item product-list__item--choosen-products">
-                  <div class="product-list__title">Chicken and rice</div>
-                  <small class="product-list__description">Amount: 100g</small>
-                  <small class="product-list__description">results: 79kcal</small>
-                  </small>
+
+                <li
+                  class="product-list__item product-list__item--choosen-products"
+                >
+                  <div class="product-list__title--choosen-products">
+                    Chicken and rice:
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    300g ·
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    237kcal
+                  </div>
                 </li>
-                <li class="product-list__item product-list__item--choosen-products">
-                  <div class="product-list__title">Orange</div>
-                  <small class="product-list__description">Amount: 500g</small>
-                  <small class="product-list__description">results: 395kcal</small>
+
+                <li
+                  class="product-list__item product-list__item--choosen-products"
+                >
+                  <div class="product-list__title--choosen-products">
+                    Banana yoghurt:
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    150g ·
+                  </div>
+                  <div class="product-list__description--choosen-products">
+                    129kcal
+                  </div>
                 </li>
               </ul>
-          </div>
-
-          <div class="section-box__wrapper--right">
-            <h3 class="section-box__title--right">Total:</h3>
-            <div class="total__label--wrapper">
-              <label class="total__label">You ate x calories today.</label>
-              <label class="total__label--description">See you tomorrow.</label>
             </div>
-            <img class="section-box__image" src="http://mjsw.gis.gov.pl/Resources/192/kolowy.jpg">
+
+            <div class="section-box__wrapper--right">
+              <h3 class="section-box__title--right">Total:</h3>
+              <div class="total__label--wrapper">
+                <label class="total__label">You ate x calories today.</label>
+                <label class="total__label--description"
+                  >See you tomorrow.</label
+                >
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
-    </section>
-  </main>
+    </main>
 
-  <script type="text/javascript" src="hydrate-product-lists.js"></script>
-  <script type="text/javascript" src="generate-kcal-result.js"></script>
-
-</body>
-
+    <script type="text/javascript" src="hydrate-product-lists.js"></script>
+    <script type="text/javascript" src="generate-kcal-result.js"></script>
+  </body>
 </html>
