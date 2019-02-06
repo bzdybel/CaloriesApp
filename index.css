@@ -149,7 +149,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-   max-height: 15vw
+  max-height: 20vw;
+  margin-top:0;
 
 }
 .product-list__choosen-products--wrapper{
@@ -191,13 +192,13 @@ body {
 }
 
 .section-box__wrapper--left {
-  margin-left: 0.5rem;
+  margin-top: 0.5rem;
   width: 50%;
 }
 
 .section-box__wrapper--right {
   width: 50%;
-  margin: 0 2rem;
+  margin: 0.5rem 2rem;
 }
 
 .section-box__title--left {
@@ -229,9 +230,4 @@ body {
   color: var(--dark-green);
 }
 
-.section-box__image {
-  margin: 4rem 10rem;
-  display: flex;
-  width: 300px;
-  height: 150px;
-}
+
