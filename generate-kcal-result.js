@@ -1,7 +1,7 @@
 const productKcalInfo = document.querySelector(".add-product-form__kcal-info");
 const productKcalOutcome = document.querySelector(".add-product-form__kcal-outcome");
 const productAmountInput = document.querySelector(".add-product-form__input");
-const resultInKcalText;
+
 
 const updateKcalResult = event => {
 
@@ -12,6 +12,7 @@ const updateKcalResult = event => {
 
     const kcalPer100gText = currentProduct ? currentProduct.kcalPer100g : "x";
     const resultInKcalText = currentProduct ? currentProduct.kcalPer100g * currentProductAmountValue / 100 : "x";
+
     productKcalInfo.innerText = `${kcalPer100gText} kcal per 100g`;
     productKcalOutcome.innerText = `results in ${resultInKcalText} kcal`;
 

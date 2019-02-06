@@ -170,11 +170,7 @@ body {
 .product-list__description {
   color: var(--dark-grey);
 }
-.product-list__description--choosen-products-amount {
-  color: var(--dark-green);
-}
-
-.product-list__description--choosen-products-value {
+.product-list__description--choosen-products {
   color: var(--dark-green);
 }
 .product-list__title--choosen-products {
