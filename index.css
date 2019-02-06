@@ -149,6 +149,11 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+   max-height: 15vw
+
+}
+.product-list__choosen-products--wrapper{
+  overflow-y: scroll;
 }
 
 .product-list__item {
@@ -157,9 +162,11 @@ body {
   background: var(--grey);
   margin-bottom: 0.5rem;
 }
+.product-list__item:last-child {
+  margin-bottom: 0rem;
+}
 
 .product-list__item--choosen-products {
-  width: 60%;
   display: flex;
   box-shadow: 1.5px 1.5px 1.5px 1.5px var(--soft-grey);
 }
