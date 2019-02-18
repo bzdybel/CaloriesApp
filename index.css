@@ -178,7 +178,7 @@ body {
 .chosen-product-list__item:last-child {
   margin-bottom: 0rem;
 }
-.chosen-product-list__item-description--wrapper{
+.chosen-product-list__item-description-wrapper{
   display: flex;
   justify-content: flex-end;
   width: 100%;
