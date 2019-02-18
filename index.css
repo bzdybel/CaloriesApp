@@ -144,47 +144,68 @@ body {
   padding: 0;
   margin-top: 2rem;
 }
-
-.product-list--choosen-products {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-height: 20vw;
-  margin-top:0;
-
-}
-.product-list__choosen-products--wrapper{
-  overflow-y: scroll;
-  width: 60%;
-}
-
 .product-list__item {
   padding: 0.7rem;
   width: 100%;
   background: var(--grey);
   margin-bottom: 0.5rem;
-}
-.product-list__item:last-child {
-  margin-bottom: 0rem;
-}
+  max-height: 10vw;
 
-.product-list__item--choosen-products {
+}
+.chosen-product-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 15vw;
+  margin-top:0;
+}
+.chosen-product-list__wrapper{
+  overflow-y: scroll;
+  width: 75%;
+
+}
+.chosen-product-list__item{
   display: flex;
   box-shadow: 1.5px 1.5px 1.5px 1.5px var(--soft-grey);
+  padding: 0.7rem;
+  width: 100%;
+  background: var(--grey);
+  margin-bottom: 0.5rem;
+  max-height: 10vw;
 }
-
+.chosen-product-list__item:last-child {
+  margin-bottom: 0rem;
+}
+.chosen-product-list__item-description__wrapper{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 .product-list__title {
   margin-bottom: 0.5rem;
 }
 .product-list__description {
   color: var(--dark-grey);
 }
-.product-list__description--choosen-products {
+.chosen-product-list__item-description--weight {
   color: var(--dark-green);
 }
-.product-list__title--choosen-products {
-  font-weight: bold;
+
+.chosen-product-list__item-description--kcal {
+  color: var(--dark-green);
+}
+
+.chosen-product-list__item-description--weight::after {
+  content: "\B7";
+  color:var(--dark-green);
+  margin:0 10px;
+}
+
+.chosen-product-list__item--title {
   margin-right: 0.5rem;
+  width: 100%;
 }
 
 .section-box__wrapper {
@@ -209,7 +230,7 @@ body {
   text-align: center;
 }
 
-.total__label--wrapper {
+.total-calories__wrapper {
   display: flex;
   flex-direction: column;
   background: var(--grey);
@@ -218,13 +239,13 @@ body {
   box-shadow: 2px 2px 2px 2px var(--soft-grey);
 }
 
-.total__label {
+.total-calories {
   text-align: center;
   font-size: 2rem;
   color: var(--light-black);
 }
 
-.total__label--description {
+.total-calories__description {
   text-align: center;
   font-size: 1rem;
   color: var(--dark-green);
