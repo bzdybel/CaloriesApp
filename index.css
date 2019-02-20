@@ -170,7 +170,7 @@ body {
   display: flex;
   box-shadow: 1.5px 1.5px 1.5px 1.5px var(--soft-grey);
   padding: 0.7rem;
-  width: 100%;
+  /* width: 100%; */
   background: var(--grey);
   margin-bottom: 0.5rem;
   max-height: 10vw;
@@ -191,10 +191,16 @@ body {
 }
 .chosen-product-list__item-description--weight {
   color: var(--dark-green);
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 
 .chosen-product-list__item-description--kcal {
   color: var(--dark-green);
+  box-shadow: none;
+  margin: 0;
+  padding:0;
 }
 
 .chosen-product-list__item-description--weight::after {
@@ -206,6 +212,7 @@ body {
 .chosen-product-list__item--title {
   box-shadow: none;
   padding:0;
+  width: 100%; 
 }
 
 .section-box__wrapper {
