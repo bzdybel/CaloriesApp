@@ -12,6 +12,7 @@
   --light-black: #686868;
   --boxes-gap: 2.5rem;
   --soft-grey: #ccc;
+  --black:#000000;
 }
 
 * {
@@ -43,7 +44,7 @@ body {
   background: var(--light-grey);
   height: 100%;
 }
-.section-box--summary {
+.section-box__summary {
   max-height: 70%;
 }
 
@@ -57,15 +58,7 @@ body {
   height: 100%;
 }
 
-.section-box__title {
-  margin-top: 0;
-  text-align: center;
-  background: var(--light-green);
-  color: var(--green);
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0.75rem;
-}
+
 
 .add-product-form {
   display: flex;
@@ -170,7 +163,6 @@ body {
   display: flex;
   box-shadow: 1.5px 1.5px 1.5px 1.5px var(--soft-grey);
   padding: 0.7rem;
-  /* width: 100%; */
   background: var(--grey);
   margin-bottom: 0.5rem;
   max-height: 10vw;
@@ -189,18 +181,14 @@ body {
 .product-list__description {
   color: var(--dark-grey);
 }
-.chosen-product-list__item-description--weight {
+.chosen-product-list__item-description{
   color: var(--dark-green);
   box-shadow: none;
   margin: 0;
   padding: 0;
 }
 
-.chosen-product-list__item-description--kcal {
-  color: var(--dark-green);
-  box-shadow: none;
-  margin: 0;
-  padding:0;
+.chosen-product-list__item-description--weight {
 }
 
 .chosen-product-list__item-description--weight::after {
@@ -209,7 +197,7 @@ body {
   margin:0 10px;
 }
 
-.chosen-product-list__item--title {
+.chosen-product-list__item-title {
   box-shadow: none;
   padding:0;
   width: 100%; 
@@ -217,28 +205,51 @@ body {
 
 .section-box__wrapper {
   display: flex;
+  height: 50%;
 }
 
 .section-box__wrapper--left {
+  flex-direction: column;
   margin-top: 0.5rem;
   width: 50%;
 }
 
 .section-box__wrapper--right {
+  flex-direction: column;
   width: 50%;
   margin: 0.5rem 2rem;
 }
-
-.section-box__title--left {
+.section-box__title {
+  height: 3rem;
+  margin-top: 0;
   text-align: center;
+  background: var(--light-green);
+  color: var(--green);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+.section-box__title--left {
+  background: var(--light-grey);
+  color: var(--black);
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .section-box__title--right {
+  background: var(--light-grey);
+  color: var(--black);
+  font-size: 18px;
+  padding: 0;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .total-calories__wrapper {
   display: flex;
+  height: ;
   flex-direction: column;
   background: var(--grey);
   padding: 1rem;
