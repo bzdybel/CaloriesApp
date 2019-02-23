@@ -2,15 +2,17 @@
 
 :root {
   --white: white;
-  --light-white: #DDF7D9;
+  --light-white: #ddf7d9;
   --light-grey: #f8f3f3;
-  --grey: #E5E5E5;
+  --grey: #e5e5e5;
   --dark-grey: rgba(0, 0, 0, 0.36);
   --light-green: #b4e3b3;
   --green: #4e924c;
-  --dark-green: #478D46;
+  --dark-green: #478d46;
   --light-black: #686868;
   --boxes-gap: 2.5rem;
+  --soft-grey: #ccc;
+  --black:#000000;
 }
 
 * {
@@ -21,6 +23,7 @@ body {
   background: var(--white);
   margin: 0;
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -41,25 +44,21 @@ body {
   background: var(--light-grey);
   height: 100%;
 }
+.section-box__summary {
+  max-height: 70%;
+}
 
 .section-box--add-product {
   margin-bottom: var(--boxes-gap);
-  height: 40%;
+  max-height: 30%;
 }
 
 .section-box--products {
   width: 30%;
+  height: 100%;
 }
 
-.section-box__title {
-  margin-top: 0;
-  text-align: center;
-  background: var(--light-green);
-  color: var(--green);
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0.75rem;
-}
+
 
 .add-product-form {
   display: flex;
@@ -67,20 +66,19 @@ body {
 }
 
 .add-product-form__label {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .add-product-form__dropdown {
-  padding: .7rem 5rem .7rem .7rem;
+  padding: 0.7rem 5rem 0.7rem 0.7rem;
   background: var(--grey);
   border-color: var(--grey);
   color: var(--light-black);
 }
 
-
 .add-product-form__dropdown-item {
   font-size: 16px;
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 .add-product-form__wrapper {
@@ -93,21 +91,18 @@ body {
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
-
 }
 
 .add-product-form__input {
-
   border: solid var(--grey);
-  padding: .7rem;
+  padding: 0.7rem;
   background: var(--grey);
   color: var(--light-black);
 }
 
-
 .add-product-form__kcal-outcome {
   font-weight: bold;
-  margin-bottom: .5rem 0;
+  margin-bottom: 0.5rem 0;
   white-space: nowrap;
 }
 
@@ -137,24 +132,125 @@ body {
   cursor: pointer;
 }
 
-
 .product-list {
   list-style: none;
   padding: 0;
   margin-top: 2rem;
 }
-
 .product-list__item {
-  padding: .7rem;
+  padding: 0.7rem;
   width: 100%;
   background: var(--grey);
-  margin-bottom: .5rem;
-}
+  margin-bottom: 0.5rem;
+  max-height: 10vw;
 
+}
+.chosen-product-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-height: 15vw;
+  margin-top:0;
+}
+.chosen-product-list__wrapper{
+  overflow-y: scroll;
+  width: 75%;
+
+}
+.chosen-product-list__item{
+  display: flex;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px var(--soft-grey);
+  padding: 0.7rem;
+  background: var(--grey);
+  margin-bottom: 0.5rem;
+  max-height: 10vw;
+}
+.chosen-product-list__item:last-child {
+  margin-bottom: 0rem;
+}
+.chosen-product-list__item-description-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 .product-list__title {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 .product-list__description {
   color: var(--dark-grey);
 }
+.chosen-product-list__item-description{
+  color: var(--dark-green);
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.chosen-product-list__item-description--weight::after {
+  content: "\B7";
+  color:var(--dark-green);
+  margin:0 10px;
+}
+
+.chosen-product-list__item-title {
+  box-shadow: none;
+  padding:0;
+  width: 100%; 
+}
+
+.section-box__wrapper {
+  display: flex;
+  height: 50%;
+}
+
+.section-box__wrapper--columns {
+  flex-direction: column;
+  margin: 0.5rem 2rem;
+  width: 50%;
+}
+
+.section-box__title {
+  height: 3rem;
+  margin-top: 0;
+  text-align: center;
+  background: var(--light-green);
+  color: var(--green);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0.75rem;
+}
+.section-box__title--total-section {
+  background: var(--light-grey);
+  color: var(--black);
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.total-calories__wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--grey);
+  padding: 1rem;
+  opacity: 0.7;
+  box-shadow: 2px 2px 2px 2px var(--soft-grey);
+}
+
+.total-calories {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--light-black);
+}
+
+.total-calories__description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--dark-green);
+}
+
+
