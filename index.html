@@ -73,91 +73,118 @@
 
         <section
           class="
-              section-box section-box--summary"
+              section-box section-box__summary"
         >
-          <h2 class="section-box__title">Today - 06.01.2019</h2>
+          <h2 class="section-box section-box__title">Today - 06.01.2019</h2>
 
-          <div class="section-box__wrapper">
-            <div class="section-box__wrapper--left">
-              <h3 class="section-box__title--left">Choosen products:</h3>
-              <ul class="product-list product-list--choosen-products">
+          <div class="section-box section-box__wrapper">
+            <div class="section-box__wrapper section-box__wrapper--columns">
+              <h3 class="section-box__title section-box__title--total-section">Chosen products:</h3>
+              <ul class="chosen-product-list">
+                <div class = "chosen-product-list__wrapper">
                 <li
-                  class="product-list__item product-list__item--choosen-products"
+                  class="chosen-product-list__item"
                 >
-                  <div class="product-list__title--choosen-products">
+
+                  <div class="chosen-product-list__item-title">
                     Apple:
                   </div>
+                  <div class="chosen-product-list__item-description-wrapper">
+                      <div class="chosen-product-list__item-description chosen-product-list__item-description--weight">
+                        150g
+                      </div>
+                      <div class="chosen-product-list__item-description">
+                        78kcal
+                      </div>
 
-                  <div class="product-list__description--choosen-products">
-                    150g ·
-                  </div>
-                  <div class="product-list__description--choosen-products">
-                    78kcal
                   </div>
                 </li>
 
                 <li
-                  class="product-list__item product-list__item--choosen-products"
+                  class="chosen-product-list__item"
                 >
-                  <div class="product-list__title--choosen-products">Egg:</div>
-                  <div class="product-list__description--choosen-products">
-                    100g ·
+                  <div class=" chosen-product-list__item-title">Egg:</div>
+                  <div class="chosen-product-list__item-description-wrapper">
+
+                  <div class="chosen-product-list__item-description chosen-product-list__item-description--weight">
+                    100g 
                   </div>
-                  <div class="product-list__description--choosen-products">
+                  <div class="chosen-product-list__item-description">
+
                     140kcal
                   </div>
+                </div>
+
                 </li>
 
                 <li
-                  class="product-list__item product-list__item--choosen-products"
+                  class="chosen-product-list__item"
                 >
-                  <div class="product-list__title--choosen-products">
+                  <div class="chosen-product-list__item-title">
                     Orange:
                   </div>
-                  <div class="product-list__description--choosen-products">
-                    250g ·
+
+                  <div class="chosen-product-list__item-description-wrapper">
+
+                  <div class="chosen-product-list__item-description chosen-product-list__item-description--weight">
+                    250g 
                   </div>
-                  <div class="product-list__description--choosen-products">
+                  <div class="chosen-product-list__item-description">
+
                     197.5kcal
                   </div>
+                </div>
+
                 </li>
 
                 <li
-                  class="product-list__item product-list__item--choosen-products"
+                  class="chosen-product-list__item"
                 >
-                  <div class="product-list__title--choosen-products">
+                  <div class="chosen-product-list__item-title">
                     Chicken and rice:
                   </div>
-                  <div class="product-list__description--choosen-products">
-                    300g ·
+                  <div class="chosen-product-list__item-description-wrapper">
+
+                  <div class="chosen-product-list__item-description chosen-product-list__item-description--weight">
+                    300g 
                   </div>
-                  <div class="product-list__description--choosen-products">
+                  <div class="chosen-product-list__item-description">
+
                     237kcal
                   </div>
+                </div>
+
                 </li>
 
                 <li
-                  class="product-list__item product-list__item--choosen-products"
+                  class="chosen-product-list__item"
                 >
-                  <div class="product-list__title--choosen-products">
+                  <div class="chosen-product-list__item-title">
                     Banana yoghurt:
                   </div>
-                  <div class="product-list__description--choosen-products">
-                    150g ·
+
+                  <div class="chosen-product-list__item-description-wrapper">
+
+                  <div class="chosen-product-list__item-description chosen-product-list__item-description--weight">
+                    150g 
                   </div>
-                  <div class="product-list__description--choosen-products">
+                  <div class="chosen-product-list__item-description">
                     129kcal
                   </div>
+                </div>
+
+
                 </li>
+              </div>
               </ul>
             </div>
 
-            <div class="section-box__wrapper--right">
-              <h3 class="section-box__title--right">Total:</h3>
-              <div class="total__label--wrapper">
-                <label class="total__label">You ate x calories today.</label>
-                <label class="total__label--description"
-                  >See you tomorrow.</label
+            <div class="section-box__wrapper section-box__wrapper--columns">
+              <h3 class="section-box__title section-box__title--total-section">Total:</h3>
+              <div class="total-calories__wrapper">
+                <strong class="total-calories">You ate x calories today.</strong>
+                <strong class="total-calories__description"
+                  >See you tomorrow.</strong
                 >
               </div>
             </div>
