@@ -1,13 +1,13 @@
 const addProductButton = document.querySelector(".add-product-form__button");
-const chosenProductAmountValue = document.querySelector(".add-product-form__input").value;
 const chosenProductListWrapper = document.querySelector(".chosen-product-list__wrapper");
 
 const addProduct = event => {
-    let currentProductName = document.querySelector(".add-product-form__dropdown").value;
+    event.preventDefault();
+    let currentProductValue = document.querySelector(".add-product-form__dropdown").value;
+    const chosenProductAmountValue = document.querySelector(".add-product-form__input").value;
     
-    products.forEach(product =>{
-        product.value === currentProductName ?  currentProductName= product.name : "";
-    })
+    
+    const currentProduct = products.find(product => product.value === currentProductValue);
 
     const chosenProduct = document.createElement("li");
     const chosenProductTitle = document.createElement("div");
@@ -21,9 +21,12 @@ const addProduct = event => {
     chosenProductListItemDescriptionWrapper.classList.add("chosen-product-list__item-description-wrapper");
     chosenProductValue.classList.add("chosen-product-list__item-description");
 
-    chosenProductTitle.innerText = currentProductName;
-    chosenProductAmount.innerText = chosenProductAmountValue;
-    chosenProductValue.innerText = '100'; // generate-kcal-result ??
+    const resultInKcalText = currentProduct ? currentProduct.kcalPer100g * chosenProductAmountValue / 100 : "x";
+
+
+    chosenProductTitle.innerText = currentProduct.name;
+    chosenProductAmount.innerText = chosenProductAmountValue + "g";
+    chosenProductValue.innerText = `${resultInKcalText} kcal`; 
 
     chosenProduct.appendChild(chosenProductTitle);
     chosenProductListItemDescriptionWrapper.appendChild(chosenProductAmount);
@@ -33,7 +36,8 @@ const addProduct = event => {
 
 
     chosenProductListWrapper.appendChild(chosenProduct);
-}
+    
+    document.getElementsByClassName(".add-product-form").reset();
+};
 
-addProduct();
-addProductButton.addEventListener("click", addProduct);
+addProductButton.addEventListener("submit", addProduct);
