@@ -1,4 +1,4 @@
-const addProductButton = document.querySelector(".add-product-form__button");
+const addProductForm = document.querySelector(".add-product-form");
 const chosenProductListWrapper = document.querySelector(".chosen-product-list__wrapper");
 
 const addProduct = event => {
@@ -40,4 +40,4 @@ const addProduct = event => {
     document.getElementsByClassName(".add-product-form").reset();
 };
 
-addProductButton.addEventListener("submit", addProduct);
+addProductForm.addEventListener("submit", addProduct);
