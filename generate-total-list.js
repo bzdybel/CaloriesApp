@@ -27,7 +27,7 @@ const addProduct = event => {
         summaryKcal = summaryKcal + resultInKcalText;
     }
 
-        totalCalories.innerText = `You ate ${summaryKcal} calories today`
+        totalCalories.innerText = `You ate ${Math.round(summaryKcal*100)/100} calories today`
         totalCaloriesDescription.innerText = 'See you tomorrow';
 
     
