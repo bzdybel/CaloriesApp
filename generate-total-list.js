@@ -24,6 +24,8 @@ const addProduct = event => {
 
     const resultInKcalText = currentProduct ? currentProduct.kcalPer100g * chosenProductAmountValue / 100 : "x";
     summaryKcal = summaryKcal + resultInKcalText;
+    
+    totalCalories.innerText = `You ate ${summaryKcal} calories today`
 
     chosenProductTitle.innerText = currentProduct.name;
     chosenProductAmount.innerText = chosenProductAmountValue + "g";
