@@ -1,9 +1,10 @@
 const addProductForm = document.querySelector(".add-product-form");
 const chosenProductListWrapper = document.querySelector(".chosen-product-list__wrapper");
+let summaryKcal=0;
 
 const addProduct = event => {
     event.preventDefault();
-    let currentProductValue = document.querySelector(".add-product-form__dropdown").value;
+    const currentProductValue = document.querySelector(".add-product-form__dropdown").value;
     const chosenProductAmountValue = document.querySelector(".add-product-form__input").value;
     
     
@@ -22,7 +23,7 @@ const addProduct = event => {
     chosenProductValue.classList.add("chosen-product-list__item-description");
 
     const resultInKcalText = currentProduct ? currentProduct.kcalPer100g * chosenProductAmountValue / 100 : "x";
-
+    summaryKcal = summaryKcal + resultInKcalText;
 
     chosenProductTitle.innerText = currentProduct.name;
     chosenProductAmount.innerText = chosenProductAmountValue + "g";
@@ -34,10 +35,11 @@ const addProduct = event => {
     chosenProduct.appendChild(chosenProductListItemDescriptionWrapper);
 
 
-
     chosenProductListWrapper.appendChild(chosenProduct);
     
-    document.getElementsByClassName(".add-product-form").reset();
+
+    document.querySelector(".add-product-form").reset();
+
 };
 
 addProductForm.addEventListener("submit", addProduct);
