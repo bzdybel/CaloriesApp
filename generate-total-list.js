@@ -1,7 +1,6 @@
 const addProductForm = document.querySelector(".add-product-form");
 const chosenProductListWrapper = document.querySelector(".chosen-product-list__wrapper");
 let summaryKcal=0;
-
 const addProduct = event => {
     event.preventDefault();
     const currentProductValue = document.querySelector(".add-product-form__dropdown").value;
@@ -23,10 +22,15 @@ const addProduct = event => {
     chosenProductValue.classList.add("chosen-product-list__item-description");
 
     const resultInKcalText = currentProduct ? currentProduct.kcalPer100g * chosenProductAmountValue / 100 : "x";
-    summaryKcal = summaryKcal + resultInKcalText;
     
-    totalCalories.innerText = `You ate ${summaryKcal} calories today`
+    if(currentProduct != undefined){
+        summaryKcal = summaryKcal + resultInKcalText;
+    }
 
+        totalCalories.innerText = `You ate ${summaryKcal} calories today`
+        totalCaloriesDescription.innerText = 'See you tomorrow';
+
+    
     chosenProductTitle.innerText = currentProduct.name;
     chosenProductAmount.innerText = chosenProductAmountValue + "g";
     chosenProductValue.innerText = `${resultInKcalText} kcal`; 
@@ -41,6 +45,8 @@ const addProduct = event => {
     
 
     document.querySelector(".add-product-form").reset();
+    productKcalInfo.innerText= 'x kcal per 100g';
+    productKcalOutcome.innerText = 'results in x kcal';
 
 };
 

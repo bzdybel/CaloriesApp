@@ -7,7 +7,7 @@ const totalCaloriesDescription = document.createElement("strong");
 totalCalories.classList.add("total-calories");
 totalCaloriesDescription.classList.add("total-calories__description");
 
-totalCaloriesDescription.innerText = 'See you tomorrow';
+totalCalories.innerText = "You did not eat anything today"
 
 totalCaloresWrapper.appendChild(totalCalories);
 totalCaloresWrapper.appendChild(totalCaloriesDescription);
