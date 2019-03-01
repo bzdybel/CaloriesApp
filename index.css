@@ -193,6 +193,7 @@ body {
   content: "\B7";
   color:var(--dark-green);
   margin:0 10px;
+
 }
 
 .chosen-product-list__item-title {
